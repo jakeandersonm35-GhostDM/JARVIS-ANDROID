@@ -1,0 +1,28 @@
+JARVIS Android APK build
+========================
+
+You do NOT need Android Studio or a computer with Flutter installed.
+GitHub builds the APK for you, for free.
+
+1. Create a free GitHub account and a NEW repository (private is fine).
+2. Unzip this project. Upload the CONTENTS of the "Jarvis-master" folder to the
+   repository root (so ".github", "android", "lib", "pubspec.yaml" are at the top
+   level, NOT inside a sub-folder). The ".github/workflows" folder must be at the
+   root, otherwise GitHub will not see the workflow.
+   Easiest way: on the repo page choose "Add file > Upload files" and drag
+   everything in. Make sure the default branch is called "main".
+3. Open the repository's "Actions" tab. If asked, click "I understand my
+   workflows, go ahead and enable them".
+4. Pick "JARVIS Android APK Builder" > "Run workflow" > "Run workflow".
+5. Wait about 8-15 minutes for the green tick.
+6. Open the finished run, scroll to "Artifacts" and download "JARVIS-Android-APK".
+7. Unzip it. Install JARVIS-Android-APK.apk on the phone. If it ever fails to
+   start, try JARVIS-Android-APK-debug.apk instead and send me the error.
+
+See INSTALL-ON-HUAWEI-NOVA-12i.md for phone-side setup.
+
+Notes
+- The APK is signed with the debug key: fine for your own phone, not for the
+  Play Store / AppGallery.
+- If the build turns red, open the failed step and copy the last ~40 lines of
+  the log. That tells exactly what to fix.
